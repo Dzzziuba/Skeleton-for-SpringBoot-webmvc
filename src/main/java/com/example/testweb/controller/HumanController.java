@@ -18,8 +18,9 @@ public class HumanController {
 
     HumanRepository repository;
 
-    @GetMapping("/")
+    @RequestMapping(value = "/", produces = "application/json")
     public Iterable<Human> getAllHumans(){
+
         return repository.findAll();
     }
 
