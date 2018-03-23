@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/static/css/main.css}" href="../static/css/main.css" type="text/css">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+    </tr>
+    <tr th:each="human : ${humans}">
+        <td th:text="${human.getUserName()}"/>
+        <td th:text="${human.getSurName()}"/>
+    </tr>
+</table>
+</body>
+</html>

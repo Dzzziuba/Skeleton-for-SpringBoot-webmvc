@@ -1,5 +1,7 @@
 package com.example.testweb.domain;
 
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.Entity;
@@ -12,6 +14,8 @@ import javax.persistence.Id;
  */
 @Entity
 @ToString
+@Getter
+@Setter
 public class Human {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
